@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akino Foundation</title>
+    <!-- fevicon -->
+    <link rel="shortcut icon" href="/img/Group.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- awesome-icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl-carousel  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css\theme.css">
+    <link rel="stylesheet" href="css\work.css">
+    <link rel="stylesheet" href="css\gallery.css">
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="">
+            <div class="container-fluid d-flex justify-content-between align-items-center nav">
+                <div>
+                    <a class="" href="/"><img src="img\gallery\akino.png" alt="Akino-image" class=" logo-img"></a>
+                </div>
+                <div class="d-lg-flex d-none align-items-center gap-xxl-4 gap-2" id="">
+                    <div class="d-flex gap-xxl-3 gap-2">
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" aria-current="page" href="/">Home</a>
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/work.html">OUR WORK</a>
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/campaign.html">CAMPAIGN</a>
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link active-link active-link"
+                            href="/gallery.html">GALLERY</a>
+
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/about.html">ABOUT US</a>
+
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/contact.html">CONTACT US</a>
+                    </div>
+                    <a href="#" class="nav-link">
+                        <button class="bg-yellow px-4 py-1 rounded-pill border border-dark border-3">Donate <img
+                                src="img\heart.png" height="15.5" alt="" class=""></button>
+                    </a>
+
+                </div>
+                <div class="d-lg-none">
+                    <button class="btn bg-yellow" onClick="showMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="sidebar close position-fixed bg-yellow" id="sidebar">
+                <button onclick="hideMenu()" id="closeBtn" class="btn bg-yellow position-absolute end-0 me-4 mt-3"><i
+                        class="fa-solid fa-xmark fs-4"></i></button>
+                <div class="d-flex flex-column align-items-center gap-5 mt-5 pt-5 position-relative">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" aria-current="page" href="/">Home</a>
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/work.html">OUR WORK</a>
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/campaign.html">CAMPAIGN</a>
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link active-link"
+                            href="/gallery.html">GALLERY</a>
+
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/about.html">ABOUT US</a>
+
+                        <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link" href="/contact.html">CONTACT US</a>
+                    </div>
+                    <button class="bg-yellow px-5 fs-20 py-1 rounded-pill position-fixed bottom-0 mb-5"><a href="#"
+                            class="nav-link h-100 w-100"> Donate <img src="img\heart.png" height="15.5" alt=""
+                                class=""></a></button>
+
+
+                </div>
+
+            </div>
+            <div class=" h-28 d-lg-flex justify-content-lg-between align-items-center bg-yellow px-lg-5 px-4">
+                <ul
+                    class="d-flex align-items-center justify-content-lg-start justify-content-between gap-xl-4 gap-2 m-0 p-0 bg-yellow">
+                    <li class="nav-link"><a href="" class="nav-link fs-12">Follow us</a></li>
+                    <ul
+                        class="d-flex align-items-center justify-content-lg-start justify-content-end float-end gap-xl-4 gap-3 m-0 p-0">
+                        <li class="nav-link"><a href="" class="nav-link "><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-link"><a href="" class="nav-link "><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-link"><a href="" class="nav-link "><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav-link"><a href="" class="nav-link "><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </ul>
+                <ul class="d-lg-flex d-none align-items-center gap-3 m-0">
+                    <li class="nav-link"><a href="" class="nav-link"><img src="/img/email.png" alt="" height="12"
+                                class=""></a>
+                    </li>
+                    <li class="nav-link"><a href="mailto:info@akinofoundation.org" class="nav-link fs-12">
+                            info@akinofoundation.org </a></li>
+                </ul>
+            </div>
+        </nav>
+        <div onclick="hideMenu()" class="overlay-menu"></div>
+    </header>
+
+    <!-- gallery -->
+
+    <h1 class="text-center position-relative lazyMonday mt-5">
+        <span class="position-relative fw-600">
+            CHILDREN EDUCATION
+            <img src="/img/hrt.png" alt="" height="30" class="position-absolute gh1">
+            <img src="/img/e1.png" alt="" height="24" class="position-absolute gh2">
+
+        </span>
+    </h1>
+
+    <div class="container my-5 ">
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-1" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-1" src="/img/gallery/akino_child_education1.png" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-2" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-2" src="/img/gallery/akino_child_education2.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-3" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-3" src="/img/gallery/akino_child_education3.png" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-4" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-4" src="/img/gallery/akino_child_education4.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-5" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-5" src="/img/gallery/akino_child_education5.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-6" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-6" src="/img/gallery/akino_child_education6.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-7" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-7" src="/img/gallery/akino_child_education8.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-8" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-8" src="/img/gallery/akino_child_education9.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-9" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-9" src="/img/gallery/akino_child_education10.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-10" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-10" src="/img/gallery/akino_child_education11.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-11" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-11" src="/img/gallery/akino_child_education12.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-12" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-12" src="/img/gallery/akino_child_education1.png" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-13" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-13" src="/img/gallery/akino_doctor1.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-14" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-14" src="/img/gallery/akino_doctor2.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-15" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-15" src="/img/gallery/akino_doctor3.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-16" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-16" src="/img/gallery/akino_doctor4.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-17" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-17" src="/img/gallery/akino_doctor5.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-18" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-18" src="/img/gallery/akino_doctor6.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-19" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-19" src="/img/gallery/akino_doctor7.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-20" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-20" src="/img/gallery/akino_doctor8.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-21" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-21" src="/img/gallery/akino_doctor9.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-22" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-22" src="/img/gallery/akino_distribute1.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-23" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-23" src="/img/gallery/akino_distribute6.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-24" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-24" src="/img/gallery/akino_distribute7.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-25" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-25" src="/img/gallery/akino_distribute4.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-26" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-26" src="/img/gallery/akino_distribute5.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-27" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-27" src="img/gallery/akino_health_img1.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-28" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-28" src="img/gallery/akino_health_img2.png" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-29" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-29" src="img/gallery/akino_health_img3.jpg" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mt-4">
+                <a data-fslightbox href="#img-30" class="">
+                    <div class="swiper-slide h-auto">
+                        <img id="img-30" src="img/gallery/akino_health_img4.png" alt=""
+                            class="img-cover rounded-4">
+                    </div>
+                </a>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+    <!-- footer  -->
+    <footer class="bg-dark">
+        <div class="px-md-5 px-2">
+            <div class="px-md-4 px-2 text-center d-flex justify-content-center align-items-center flex-column pt-5">
+                <a href="/" class=""><img src="img/logo.png" height="70" alt="" class=""></a>
+                <ul
+                    class="gap-md-5 gap-4 ps-0 mt-5 d-flex justify-content-around col-lg-8 col-md-9 col-12 flex-wrap pb-4">
+                    <a href="/" class="nav-link text-white fs-20 lh-1 fw-500">HOME</a>
+                    <a href="/about.html" class="nav-link text-white fs-20 lh-1 fw-500">ABOUT US</a>
+                    <a href="/contact.html" class="nav-link text-white fs-20 lh-1 fw-500">CONTACT US</a>
+                    <a href="/campaign.html" class="nav-link text-white fs-20 lh-1 fw-500">CAMPAIGN</a>
+                    <a href="/work.html" class="nav-link text-white fs-20 lh-1 fw-500">OUR WORK</a>
+                    <a href="/gallery.html" class="nav-link text-white fs-20 lh-1 fw-500">GALLERY</a>
+                </ul>
+
+            </div>
+            <div
+                class="d-flex justify-content-md-between justify-content-center flex-md-row flex-column justify-content-center text-center border-top pt-2">
+                <span class="d-lg-flex">
+                    <a href="#" class="text-white fs-12 nav-link">Copyright © 2023 Akino Foundation, All Rights
+                        Reserved.</a>
+                    <a href="#" class="nav-link text-white fs-12 ps-3">Privacy Policy | Terms & Conditions</a>
+                </span>
+                <span class="d-flex justify-content-center pt-lg-0 pt-2">
+                    <p class="text-white p-0 fs-12 ">Developed by: </p>
+                    <p> <a href="https://www.whizzact.com/#/" target="_blank" class="nav-link text-white fs-12 p-0 ms-2"> WhizzAct</a></p>
+                </span>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owl-carousel  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js\script.js"></script>
+    <script src="/js/fslightbox.js"></script>
+</body>
+
+</html>
