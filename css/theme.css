@@ -211,6 +211,9 @@
     .mt-15 {
         margin-top: 9rem;
     }
+    .fs-12 {
+        font-size: 12px !important;
+    }
 
     .fs-70 {
         font-size: 40px;

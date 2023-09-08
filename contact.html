@@ -75,9 +75,9 @@
                     <a class="nav-link px-xl-3 px-2 fs-14 text-dark menu-link active-link" href="/contact.html">CONTACT
                         US</a>
                 </div>
-                <button class="bg-yellow px-5 fs-20 py-1 rounded-pill position-fixed bottom-0 mb-5"><a
-                        href="#" class="nav-link h-100 w-100"> Donate <img src="img\heart.png"
-                            height="15.5" alt="" class=""></a></button>
+                <button class="bg-yellow px-5 fs-20 py-1 rounded-pill position-fixed bottom-0 mb-5"><a href="#"
+                        class="nav-link h-100 w-100"> Donate <img src="img\heart.png" height="15.5" alt=""
+                            class=""></a></button>
 
             </div>
 
@@ -102,7 +102,7 @@
                             class=""></a>
                 </li>
                 <li class="nav-link"><a href="mailto:info@akinofoundation.org" class="nav-link fs-12">
-                    info@akinofoundation.org </a></li>
+                        info@akinofoundation.org </a></li>
             </ul>
         </div>
         <div onclick="hideMenu()" class="overlay-menu"></div>
@@ -121,69 +121,62 @@
 
                 <div
                     class="main-form d-flex flex-column mx-auto p-md-5 p-4 bg-white  col-lg-6  col-md-10 col-12 rounded-4">
-                    <form class="gradient-custom">
+                    <form class="gradient-custom" onsubmit="return formValidation()">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-
                                 <div class="form-outline">
                                     <label class="font-sm" for="Name">Name</label>
                                     <input type="text" id="Name"
-                                        class="input-height input-background-color  form-control" />
+                                        class="input-height input-background-color form-control" />
+                                    <p class="text-mm text-danger p-0 m-0 position-absolute" id="nameError"></p>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
-
                                 <div class="form-outline">
                                     <label class="font-sm" for="email">Email</label>
                                     <input type="email" id="email"
                                         class=" input-height input-background-color form-control" />
+                                    <p class="text-mm text-danger p-0 m-0 position-absolute" id="emailError"></p>
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-6 mb-3">
                                 <div class="form-outline">
                                     <label class="font-sm" for="phone">Phone Number</label>
-                                    <input type="email" id="phone"
+                                    <input type="tel" id="phone"
                                         class="input-background-color input-height form-control" />
+                                    <p class="text-mm text-danger p-0 m-0 position-absolute" id="phoneError"></p>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="form-outline">
                                     <label class="font-sm" for="location">Location</label>
-                                    <input type="tel" id="location"
+                                    <input type="text" id="location"
                                         class="input-background-color input-height form-control" />
+                                    <p class="text-mm text-danger p-0 m-0 position-absolute" id="locationError"></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class=" mb-3">
-
+                            <div class="col-12 mb-3">
                                 <div class="form-outline">
                                     <label class="font-sm" for="subject">Subject</label>
-                                    <input type="email" id="subject"
+                                    <input type="text" id="subject"
                                         class="input-background-color input-height form-control" />
+                                    <p class="text-mm text-danger p-0 m-0 position-absolute" id="subjectError"></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class=" mb-5">
-
+                            <div class="col-12 mb-5">
                                 <div class="form-outline">
-                                    <label class="font-sm" for="massage">Massage</label>
+                                    <label class="font-sm" for="message">Message</label>
                                     <textarea class="textarea-height form-control input-background-color" name=""
-                                        id="massage" cols="30" rows="10"></textarea>
+                                        id="message" cols="30" rows="10"></textarea>
+                                    <p class="text-mm text-danger p-0 m-0 position-absolute" id="msgError"></p>
+
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class=" mb-4">
+                            <div class="col-12 mb-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheck"
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox"
                                         value="option2">
-                                    <label class="form-check-label fs-15" for="exampleCheck">
+                                    <label class="form-check-label fs-15" for="checkbox">
                                         By sharing your details, you agree to receive stories and updates from Akino
                                         via mobile, Whatsapp,
                                         landline, email and post. If you’d like to change this, please send us an
@@ -191,12 +184,11 @@
                                     </label>
                                 </div>
                             </div>
+                            <div class="col-12 mt-md-5 mt-3">
+                                <button type="submit"
+                                    class="border-0 rounded yellow-back-color input-height w-100 font-md">SUBMIT</button>
+                            </div>
                         </div>
-                        <div class="mt-md-5 mt-3">
-                            <button
-                                class="border-0 rounded yellow-back-color input-height w-100 font-md">SUBMIT</button>
-                        </div>
-
                     </form>
                 </div>
             </div>
@@ -215,7 +207,8 @@
             <div class=" address-block position-absolute  yellow-back-color m-3 rounded-4 p-4">
                 <div class=" ">
                     <h6 class="address-font">Address</h6>
-                    <p class="font-sm"> Nagababa nagar ,plot no -06,R number -201,Vashinaka,near kukreja face 2 compound ,chembur,mumbai-400074 </p>
+                    <p class="font-sm"> Nagababa nagar ,plot no -06,R number -201,Vashinaka,near kukreja face 2 compound
+                        ,chembur,mumbai-400074 </p>
 
 
                 </div>
@@ -230,9 +223,9 @@
         <div class=" contact-block d-md-flex gap-2 mx-auto col-lg-8 col-11 mb-5 pe-md-2 ">
             <div
                 class="d-flex justify-content-between col-md-6 yellow-back-color p-3 ps-md-4 rounded-3 box-height me-md-2 mb-4 mb-md-0">
-                <div class=" ">
+                <div class="">
                     <p class="font-sm m-0 ps-1">Mail Us</p>
-                    <a href="mailto:info@info@akinofoundation.org" class=" p-0 m-0 font-md nav-link">
+                    <a href="mailto:info@info@akinofoundation.org" class=" p-0 m-0 font-md nav-link fs-12">
                         info@info@akinofoundation.org</a>
                 </div>
                 <div>
@@ -283,7 +276,8 @@
                 </span>
                 <span class="d-flex justify-content-center pt-lg-0 pt-2">
                     <p class="text-white p-0 fs-12 ">Developed by: </p>
-                    <p> <a href="https://www.whizzact.com/#/" target="_blank" class="nav-link text-white fs-12 p-0 ms-2"> WhizzAct</a></p>
+                    <p> <a href="https://www.whizzact.com/#/" target="_blank"
+                            class="nav-link text-white fs-12 p-0 ms-2"> WhizzAct</a></p>
                 </span>
             </div>
         </div>
@@ -315,6 +309,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <script src="/js/formvalidation.js"></script>
     <script src="js\script.js"></script>
 </body>
 
